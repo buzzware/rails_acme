@@ -1,0 +1,869 @@
+garymac:repos gary$ rails new rails_acme -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+       apply  https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+    composer  
+    composer   _____       _ _
+    composer  |  __ \     (_) |       /\
+    composer  | |__) |__ _ _| |___   /  \   _ __  _ __  ___
+    composer  |  _  // _` | | / __| / /\ \ | '_ | '_ \/ __|
+    composer  | | \ \ (_| | | \__ \/ ____ \| |_) | |_) \__ \
+    composer  |_|  \_\__,_|_|_|___/_/    \_\ .__/| .__/|___/
+    composer                               | |   | |
+    composer                               | |   | |
+    composer  
+    composer  Rails Composer, open source, supported by subscribers.
+    composer  Please join RailsApps to support development of Rails Composer.
+    composer  Need help? Ask on Stack Overflow with the tag 'railsapps.'
+    composer  Your new application will contain diagnostics in its README file.
+      insert    config/application.rb
+      recipe  Running core recipe...
+        core  selected all core recipes
+      recipe  Running git recipe...
+         git  initialize git
+      remove    .gitignore
+      create    .gitignore
+         run    git init from "."
+Initialized empty Git repository in /Users/gary/repos/rails_acme/.git/
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: initial commit" from "."
+      recipe  Running railsapps recipe...
+      option  Build a starter application?
+          1)  Build a RailsApps example application
+          2)  Contributed applications (none available)
+          3)  Custom application (experimental)
+      choose  Enter your selection: 1
+      option  Choose a starter application.
+          1)  learn-rails
+          2)  rails-bootstrap
+          3)  rails-foundation
+          4)  rails-omniauth
+          5)  rails-devise
+          6)  rails-devise-roles
+          7)  rails-devise-pundit
+          8)  rails-signup-download
+      choose  Enter your selection: 7
+              Get on the mailing list for Rails Composer news?
+      option  Enter your email address: 
+      recipe  Running learn_rails recipe...
+      recipe  Running rails_bootstrap recipe...
+      recipe  Running rails_foundation recipe...
+      recipe  Running rails_omniauth recipe...
+      recipe  Running rails_devise recipe...
+      recipe  Running rails_devise_roles recipe...
+      recipe  Running rails_devise_pundit recipe...
+      recipe  Running rails_signup_download recipe...
+      recipe  Running rails_mailinglist_activejob recipe...
+      recipe  Running setup recipe...
+       setup  Your operating system is darwin12.5.0.
+       setup  You are using Ruby version 2.1.1.
+       setup  You are using Rails version 4.1.6.
+      option  Web server for development?
+          1)  WEBrick (default)
+          2)  Thin
+          3)  Unicorn
+          4)  Puma
+          5)  Phusion Passenger (Apache/Nginx)
+          6)  Phusion Passenger (Standalone)
+      choose  Enter your selection: 2
+      option  Web server for production?
+          1)  Same as development
+          2)  Thin
+          3)  Unicorn
+          4)  Puma
+          5)  Phusion Passenger (Apache/Nginx)
+          6)  Phusion Passenger (Standalone)
+      choose  Enter your selection: 5
+      option  Database used in development?
+          1)  SQLite
+          2)  PostgreSQL
+          3)  MySQL
+      choose  Enter your selection: 2
+      option  Template engine?
+          1)  ERB
+          2)  Haml
+          3)  Slim
+      choose  Enter your selection: 1
+      option  Test framework?
+          1)  None
+          2)  RSpec with Capybara
+      choose  Enter your selection: 2
+       setup  Adding DatabaseCleaner, FactoryGirl, Faker, Launchy, Selenium
+      option  Continuous testing?
+          1)  None
+          2)  Guard
+      choose  Enter your selection: 1
+      option  Front-end framework?
+          1)  None
+          2)  Bootstrap 3.2
+          3)  Bootstrap 2.3
+          4)  Zurb Foundation 5.4
+          5)  Zurb Foundation 4.0
+          6)  Simple CSS
+      choose  Enter your selection: 2
+       setup  The Devise 'forgot password' feature requires email.
+      option  Add support for sending email?
+          1)  None
+          2)  Gmail
+          3)  SMTP
+          4)  SendGrid
+          5)  Mandrill
+      choose  Enter your selection: 5
+      option  Devise modules?
+          1)  Devise with default modules
+          2)  Devise with Confirmable module
+          3)  Devise with Confirmable and Invitable modules
+      choose  Enter your selection: 3
+      option  Admin interface for database?
+          1)  None
+          2)  Upmin
+      choose  Enter your selection: 1
+      option  Use a form builder gem?
+          1)  None
+          2)  SimpleForm
+      choose  Enter your selection: 2
+      create    README
+      append    README
+      recipe  Running locale recipe...
+      recipe  Running readme recipe...
+      recipe  Running gems recipe...
+      insert    Gemfile
+        gsub    Gemfile
+        gsub    Gemfile
+        gsub    Gemfile
+        gsub    Gemfile
+        gsub    Gemfile
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: Gemfile" from "."
+      recipe  Running tests recipe...
+      recipe  Running email recipe...
+      recipe  Running devise recipe...
+      recipe  Running omniauth recipe...
+      recipe  Running roles recipe...
+      recipe  Running frontend recipe...
+      recipe  Running pages recipe...
+      recipe  Running init recipe...
+      recipe  Running analytics recipe...
+      option  Install page-view analytics?
+          1)  None
+          2)  Google Analytics
+          3)  Segment.io
+      choose  Enter your selection: 2
+      option  Google Analytics ID? 
+      recipe  Running deployment recipe...
+      option  Prepare for deployment?
+          1)  no
+          2)  Heroku
+          3)  Capistrano
+      choose  Enter your selection: 1
+      recipe  Running extras recipe...
+      option  Set a robots.txt file to ban spiders? (y/n) y
+      option  Create a GitHub repository? (y/n) n
+      option  Use or create a project-specific rvm gemset? (y/n) n
+      extras  recipe setting quiet_assets for reduced asset pipeline logging
+      extras  recipe adding better_errors gem
+      extras  recipe banning spiders by modifying 'public/robots.txt'
+    composer  Installing gems. This will take a while.
+         run    bundle install --without production from "."
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Using rake 10.3.2
+Using i18n 0.6.11
+Using json 1.8.1
+Using minitest 5.4.2
+Using thread_safe 0.3.4
+Using tzinfo 1.2.2
+Using activesupport 4.1.6
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.6
+Using rack 1.5.2
+Using rack-test 0.6.2
+Using actionpack 4.1.6
+Using mime-types 2.4.3
+Using mail 2.6.3
+Using actionmailer 4.1.6
+Using activemodel 4.1.6
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.6
+Using addressable 2.3.6
+Using bcrypt 3.1.9
+Using coderay 1.1.0
+Using better_errors 2.0.0
+Using debug_inspector 0.0.2
+Using binding_of_caller 0.7.2
+Using sass 3.2.19
+Using bootstrap-sass 3.3.0.1
+Using bundler 1.6.2
+Using mini_portile 0.6.1
+Installing nokogiri 1.6.4.1
+Using xpath 2.0.0
+Using capybara 2.4.4
+Using ffi 1.9.6
+Using childprocess 0.5.5
+Using coffee-script-source 1.8.0
+Using execjs 2.2.2
+Using coffee-script 2.3.0
+Using thor 0.19.1
+Using railties 4.1.6
+Using coffee-rails 4.0.1
+Using daemons 1.1.9
+Using database_cleaner 1.3.0
+Using orm_adapter 0.5.0
+Installing responders 1.1.2
+Using warden 1.2.3
+Using devise 3.4.1
+Using devise_invitable 1.4.0
+Using diff-lcs 1.2.5
+Using eventmachine 1.0.3
+Using factory_girl 4.5.0
+Using factory_girl_rails 4.5.0
+Using faker 1.4.3
+Using hike 1.2.3
+Using multi_json 1.10.1
+Using jbuilder 2.2.4
+Using jquery-rails 3.1.2
+Using launchy 2.4.3
+Using pg 0.17.1
+Using pundit 0.3.0
+Using quiet_assets 1.0.3
+Using tilt 1.4.1
+Using sprockets 2.11.3
+Using sprockets-rails 2.2.0
+Using rails 4.1.6
+Using rails_apps_pages 0.5.15
+Using rails_apps_testing 0.3.12
+Using rails_layout 1.0.23
+Using rdoc 4.1.2
+Using rspec-support 3.1.2
+Using rspec-core 3.1.7
+Using rspec-expectations 3.1.2
+Using rspec-mocks 3.1.3
+Using rspec-rails 3.1.0
+Using rubyzip 1.1.6
+Using sass-rails 4.0.4
+Using sdoc 0.4.1
+Using websocket 1.2.1
+Using selenium-webdriver 2.44.0
+Using simple_form 3.0.2
+Using spring 1.1.3
+Using thin 1.6.3
+Using turbolinks 2.5.1
+Using uglifier 2.5.3
+Your bundle is complete!
+Gems in the group production were not installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+    composer  Updating gem paths.
+WARN: Unresolved specs during Gem::Specification.reset:
+      tzinfo (~> 1.1)
+      minitest (~> 5.1)
+      rake (>= 0.8.7)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+    composer  Stage Two (running recipe 'stage_two' callbacks).
+locale
+gems
+        gems  recipe stage two
+        gems  configuring database
+      remove    config/database.yml
+      create    config/database.yml
+      option  Username for PostgreSQL?(leave blank to use the app name) root
+      option  Host for PostgreSQL in database.yml? (leave blank to use default socket connection) 
+        gsub    config/database.yml
+      option  Password for PostgreSQL user root? 
+        gsub    config/database.yml
+        gems  set config/database.yml for username/password root/
+        gsub    config/database.yml
+        gsub    config/database.yml
+        gsub    config/database.yml
+      option  Okay to drop all existing databases named rails_acme? 'No' will abort immediately! (y/n) y
+         run    bundle exec rake db:drop from "."
+         run    bundle exec rake db:create:all from "."
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: create database" from "."
+gems
+        gems  recipe stage two
+        gems  running generators
+        gems  recipe installing simple_form for use with Bootstrap
+    generate    simple_form:install --bootstrap
+      create  config/initializers/simple_form.rb
+      create  config/initializers/simple_form_bootstrap.rb
+       exist  config/locales
+      create  config/locales/simple_form.en.yml
+      create  lib/templates/erb/scaffold/_form.html.erb
+===============================================================================
+
+  Be sure to have a copy of the Bootstrap stylesheet available on your
+  application, you can get it on http://twitter.github.com/bootstrap.
+
+  Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+  classes, '.form-horizontal', '.form-inline', '.form-search' or
+  '.form-vertical', as the following:
+
+    = simple_form_for(@user, html: {class: 'form-horizontal' }) do |form|
+
+===============================================================================
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: generators" from "."
+tests
+       tests  recipe stage two
+       tests  recipe installing RSpec
+    generate    testing:configure rspec -f
+         run  rm -rf test/ from "."
+    generate  rspec:install
+      create  .rspec
+      create  spec
+      create  spec/spec_helper.rb
+      create  spec/rails_helper.rb
+      insert  .rspec
+      insert  .rspec
+        gsub  .rspec
+      insert  config/application.rb
+      create  spec/support/capybara.rb
+        gsub  spec/rails_helper.rb
+        gsub  spec/rails_helper.rb
+      create  spec/support/database_cleaner.rb
+      create  spec/support/factory_girl.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: testing framework" from "."
+email
+       email  recipe stage two
+      insert    config/environments/development.rb
+      insert    config/environments/production.rb
+        gsub    config/environments/production.rb
+      insert    config/environments/development.rb
+      insert    config/environments/production.rb
+        gsub    config/environments/development.rb
+        gsub    config/environments/production.rb
+        gsub    config/environments/development.rb
+        gsub    config/environments/production.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: set email accounts" from "."
+devise
+      devise  recipe stage two
+        gsub    config/initializers/filter_parameter_logging.rb
+    generate    devise:install
+      create  config/initializers/devise.rb
+      create  config/locales/devise.en.yml
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  1. Ensure you have defined default url options in your environments files. Here
+     is an example of default_url_options appropriate for a development environment
+     in config/environments/development.rb:
+
+       config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+     In production, :host should be set to the actual host of your application.
+
+  2. Ensure you have defined root_url to *something* in your config/routes.rb.
+     For example:
+
+       root to: "home#index"
+
+  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
+     For example:
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+  4. If you are deploying on Heroku with Rails 3.2 only, you may want to set:
+
+       config.assets.initialize_on_precompile = false
+
+     On config/application.rb forcing your application to not access the DB
+     or load models when precompiling your assets.
+
+  5. You can copy Devise views (for customization) to your app by running:
+
+       rails g devise:views
+
+===============================================================================
+    generate    devise_invitable:install
+      insert  config/initializers/devise.rb
+      create  config/locales/devise_invitable.en.yml
+    generate    devise user
+      invoke  active_record
+      create    db/migrate/20141108090454_devise_create_users.rb
+      create    app/models/user.rb
+      invoke    rspec
+      create      spec/models/user_spec.rb
+      invoke      factory_girl
+      create        spec/factories/users.rb
+      insert    app/models/user.rb
+       route  devise_for :users
+    generate    migration AddNameToUsers name:string
+      invoke  active_record
+      create    db/migrate/20141108090458_add_name_to_users.rb
+        gsub    app/models/user.rb
+    generate    migration AddConfirmableToUsers confirmation_token:string confirmed_at:datetime confirmation_sent_at:datetime unconfirmed_email:string
+      invoke  active_record
+      create    db/migrate/20141108090502_add_confirmable_to_users.rb
+         run    bundle exec rake db:migrate from "."
+== 20141108090454 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0500s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0047s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0030s
+== 20141108090454 DeviseCreateUsers: migrated (0.0590s) =======================
+
+== 20141108090458 AddNameToUsers: migrating ===================================
+-- add_column(:users, :name, :string)
+   -> 0.0019s
+== 20141108090458 AddNameToUsers: migrated (0.0021s) ==========================
+
+== 20141108090502 AddConfirmableToUsers: migrating ============================
+-- add_column(:users, :confirmation_token, :string)
+   -> 0.0015s
+-- add_column(:users, :confirmed_at, :datetime)
+   -> 0.0022s
+-- add_column(:users, :confirmation_sent_at, :datetime)
+   -> 0.0014s
+-- add_column(:users, :unconfirmed_email, :string)
+   -> 0.0010s
+== 20141108090502 AddConfirmableToUsers: migrated (0.0073s) ===================
+
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: devise" from "."
+omniauth
+    omniauth  recipe stage two
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: omniauth" from "."
+# On branch master
+nothing to commit (working directory clean)
+roles
+       roles  recipe stage two
+    generate    migration AddRoleToUsers role:integer
+      invoke  active_record
+      create    db/migrate/20141108090512_add_role_to_users.rb
+      insert    app/models/user.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: add roles to a User model" from "."
+frontend
+    frontend  recipe stage two
+    generate    layout:install bootstrap3 -f
+      remove  app/assets/stylesheets/application.css
+      create  app/assets/stylesheets/application.css.scss
+      create  app/assets/stylesheets/framework_and_overrides.css.scss
+       force  app/assets/javascripts/application.js
+      remove  app/assets/stylesheets/simple.css
+      remove  app/assets/stylesheets/foundation_and_overrides.css.scss
+      append  app/assets/stylesheets/framework_and_overrides.css.scss
+      remove  app/views/layouts/application.html.erb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/_messages.html.erb
+      create  app/views/layouts/_navigation.html.erb
+      create  app/views/layouts/_navigation_links.html.erb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: front-end framework" from "."
+pages
+       pages  recipe stage two
+    generate    pages:users -f
+      create  app/views/users/_user.html.erb
+      create  app/views/users/index.html.erb
+      create  app/views/users/show.html.erb
+    generate  pages:home -f
+      create  app/views/visitors/index.html.erb
+      create  app/controllers/visitors_controller.rb
+      insert  config/routes.rb
+      create  spec/features/visitors/home_page_spec.rb
+       force  app/views/visitors/index.html.erb
+      create  app/controllers/users_controller.rb
+      insert  config/routes.rb
+      create  config/initializers/devise_permitted_parameters.rb
+     prepend  app/views/users/_user.html.erb
+      insert  app/views/users/show.html.erb
+    generate    pages:authorized -f
+      create  config/initializers/pundit.rb
+       force  app/views/users/_user.html.erb
+       force  app/controllers/users_controller.rb
+      create  app/policies/user_policy.rb
+    generate    layout:navigation -f
+   identical  app/views/layouts/_navigation_links.html.erb
+      append  app/views/layouts/_navigation_links.html.erb
+      append  app/views/layouts/_navigation_links.html.erb
+      create  spec/features/visitors/navigation_spec.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: add pages" from "."
+analytics
+   analytics  recipe stage two
+    generate    analytics:google -f
+      create  app/assets/javascripts/google_analytics.js.coffee
+        gsub    app/assets/javascripts/google_analytics.js.coffee
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: add analytics" from "."
+extras
+      extras  recipe stage two
+        gsub    public/robots.txt
+        gsub    public/robots.txt
+    composer  Stage Three (running recipe 'stage_three' callbacks).
+readme
+      readme  recipe stage three
+      remove    README
+      remove    README.rdoc
+      remove    doc/README_FOR_APP
+      create    README
+      append    README
+      append    README
+      create    public/humans.txt
+      create    README.md
+      append    README.md
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: add README files" from "."
+tests
+       tests  recipe stage three
+    generate    testing:configure devise -f
+      create  spec/support/devise.rb
+      create  spec/support/helpers/session_helpers.rb
+      create  spec/support/helpers.rb
+       force  spec/factories/users.rb
+       force  spec/models/user_spec.rb
+      create  spec/features/users/sign_in_spec.rb
+      create  spec/features/users/sign_out_spec.rb
+      create  spec/features/users/user_delete_spec.rb
+      create  spec/features/users/user_edit_spec.rb
+      create  spec/features/users/user_index_spec.rb
+      create  spec/features/users/user_show_spec.rb
+      create  spec/features/visitors/sign_up_spec.rb
+      insert    spec/factories/users.rb
+      insert    config/environments/test.rb
+        gsub    spec/features/users/user_edit_spec.rb
+        gsub    spec/features/visitors/sign_up_spec.rb
+    generate    testing:configure pundit -f
+       force  spec/factories/users.rb
+       force  spec/features/users/user_index_spec.rb
+      create  spec/policies/user_policy_spec.rb
+      create  spec/support/pundit.rb
+      insert    spec/factories/users.rb
+init
+        init  recipe stage three
+      insert    config/secrets.yml
+      insert    config/secrets.yml
+      insert    config/secrets.yml
+      insert    config/secrets.yml
+      insert    config/secrets.yml
+      insert    config/secrets.yml
+      insert    config/secrets.yml
+        gsub    config/initializers/devise.rb
+      remove    db/seeds.rb
+      create    db/seeds.rb
+      remove    app/services/create_admin_service.rb
+      create    app/services/create_admin_service.rb
+      insert    app/services/create_admin_service.rb
+         run    bundle exec rake db:migrate from "."
+== 20141108090512 AddRoleToUsers: migrating ===================================
+-- add_column(:users, :role, :integer)
+   -> 0.0021s
+== 20141108090512 AddRoleToUsers: migrated (0.0040s) ==========================
+
+    generate    devise_invitable user
+      insert  app/models/user.rb
+      invoke  active_record
+      create    db/migrate/20141108090601_devise_invitable_add_to_users.rb
+        init  applying migrations and seeding the database
+         run    bundle exec rake db:migrate from "."
+== 20141108090601 DeviseInvitableAddToUsers: migrating ========================
+-- change_table(:users)
+   -> 0.2120s
+-- change_column_null(:users, :encrypted_password, true)
+   -> 0.0005s
+== 20141108090601 DeviseInvitableAddToUsers: migrated (0.2128s) ===============
+
+         run    bundle exec rake db:seed from "."
+CREATED ADMIN USER: user@example.com
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: set up database" from "."
+    generate    layout:devise bootstrap3 -f
+      create  app/views/devise/sessions/new.html.erb
+      create  app/views/devise/passwords/new.html.erb
+      create  app/views/devise/passwords/edit.html.erb
+      create  app/views/devise/registrations/new.html.erb
+      create  app/views/devise/registrations/edit.html.erb
+        gsub  app/views/devise/registrations/new.html.erb
+        gsub  app/views/devise/registrations/edit.html.erb
+      insert  app/views/devise/registrations/new.html.erb
+      insert  app/views/devise/registrations/edit.html.erb
+    generate    layout:navigation -f
+       force  app/views/layouts/_navigation_links.html.erb
+      append  app/views/layouts/_navigation_links.html.erb
+      append  app/views/layouts/_navigation_links.html.erb
+   identical  spec/features/visitors/navigation_spec.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: navigation links" from "."
+deployment
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: prepare for deployment" from "."
+# On branch master
+nothing to commit (working directory clean)
+extras
+      extras  recipe stage three
+      extras  recipe removing unnecessary files and whitespace
+      remove    public/index.html
+      remove    app/assets/images/rails.png
+        gsub    Gemfile
+        gsub    Gemfile
+        gsub    Gemfile
+        gsub    Gemfile
+      remove    Gemfile.lock
+         run    bundle install --without production from "."
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Using rake 10.3.2
+Using i18n 0.6.11
+Using json 1.8.1
+Using minitest 5.4.2
+Using thread_safe 0.3.4
+Using tzinfo 1.2.2
+Using activesupport 4.1.6
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.6
+Using rack 1.5.2
+Using rack-test 0.6.2
+Using actionpack 4.1.6
+Using mime-types 2.4.3
+Using mail 2.6.3
+Using actionmailer 4.1.6
+Using activemodel 4.1.6
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.6
+Using addressable 2.3.6
+Using bcrypt 3.1.9
+Using coderay 1.1.0
+Using better_errors 2.0.0
+Using debug_inspector 0.0.2
+Using binding_of_caller 0.7.2
+Using sass 3.2.19
+Using bootstrap-sass 3.3.0.1
+Using bundler 1.6.2
+Using mini_portile 0.6.1
+Using nokogiri 1.6.4.1
+Using xpath 2.0.0
+Using capybara 2.4.4
+Using ffi 1.9.6
+Using childprocess 0.5.5
+Using coffee-script-source 1.8.0
+Using execjs 2.2.2
+Using coffee-script 2.3.0
+Using thor 0.19.1
+Using railties 4.1.6
+Using coffee-rails 4.0.1
+Using daemons 1.1.9
+Using database_cleaner 1.3.0
+Using orm_adapter 0.5.0
+Using responders 1.1.2
+Using warden 1.2.3
+Using devise 3.4.1
+Using devise_invitable 1.4.0
+Using diff-lcs 1.2.5
+Using eventmachine 1.0.3
+Using factory_girl 4.5.0
+Using factory_girl_rails 4.5.0
+Using faker 1.4.3
+Using hike 1.2.3
+Using multi_json 1.10.1
+Using jbuilder 2.2.4
+Using jquery-rails 3.1.2
+Using launchy 2.4.3
+Using pg 0.17.1
+Using pundit 0.3.0
+Using quiet_assets 1.0.3
+Using tilt 1.4.1
+Using sprockets 2.11.3
+Using sprockets-rails 2.2.0
+Using rails 4.1.6
+Using rails_layout 1.0.23
+Using rdoc 4.1.2
+Using rspec-support 3.1.2
+Using rspec-core 3.1.7
+Using rspec-expectations 3.1.2
+Using rspec-mocks 3.1.3
+Using rspec-rails 3.1.0
+Using rubyzip 1.1.6
+Using sass-rails 4.0.4
+Using sdoc 0.4.1
+Using websocket 1.2.1
+Using selenium-webdriver 2.44.0
+Using simple_form 3.0.2
+Using spring 1.1.3
+Using thin 1.6.3
+Using turbolinks 2.5.1
+Using uglifier 2.5.3
+Your bundle is complete!
+Gems in the group production were not installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+        gsub    config/routes.rb
+        gsub    config/routes.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: extras" from "."
+    composer  Your new application will contain diagnostics in its README file.
+    composer  When reporting an issue on GitHub, include the README diagnostics.
+    composer  Finished running the rails_apps_composer app template.
+    composer  Your new Rails app is ready. Time to run 'bundle install'.
+         run  bundle install
+Using rake 10.3.2
+Using i18n 0.6.11
+Using json 1.8.1
+Using minitest 5.4.2
+Using thread_safe 0.3.4
+Using tzinfo 1.2.2
+Using activesupport 4.1.6
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.6
+Using rack 1.5.2
+Using rack-test 0.6.2
+Using actionpack 4.1.6
+Using mime-types 2.4.3
+Using mail 2.6.3
+Using actionmailer 4.1.6
+Using activemodel 4.1.6
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.6
+Using addressable 2.3.6
+Using bcrypt 3.1.9
+Using coderay 1.1.0
+Using better_errors 2.0.0
+Using debug_inspector 0.0.2
+Using binding_of_caller 0.7.2
+Using sass 3.2.19
+Using bootstrap-sass 3.3.0.1
+Using mini_portile 0.6.1
+Using nokogiri 1.6.4.1
+Using xpath 2.0.0
+Using capybara 2.4.4
+Using ffi 1.9.6
+Using childprocess 0.5.5
+Using coffee-script-source 1.8.0
+Using execjs 2.2.2
+Using coffee-script 2.3.0
+Using thor 0.19.1
+Using railties 4.1.6
+Using coffee-rails 4.0.1
+Using daemons 1.1.9
+Using database_cleaner 1.3.0
+Using orm_adapter 0.5.0
+Using responders 1.1.2
+Using warden 1.2.3
+Using devise 3.4.1
+Using devise_invitable 1.4.0
+Using diff-lcs 1.2.5
+Using eventmachine 1.0.3
+Using factory_girl 4.5.0
+Using factory_girl_rails 4.5.0
+Using faker 1.4.3
+Using hike 1.2.3
+Using multi_json 1.10.1
+Using jbuilder 2.2.4
+Using jquery-rails 3.1.2
+Using launchy 2.4.3
+Using pg 0.17.1
+Using pundit 0.3.0
+Using quiet_assets 1.0.3
+Using bundler 1.6.2
+Using tilt 1.4.1
+Using sprockets 2.11.3
+Using sprockets-rails 2.2.0
+Using rails 4.1.6
+Using rails_layout 1.0.23
+Using rdoc 4.1.2
+Using rspec-support 3.1.2
+Using rspec-core 3.1.7
+Using rspec-expectations 3.1.2
+Using rspec-mocks 3.1.3
+Using rspec-rails 3.1.0
+Using rubyzip 1.1.6
+Using sass-rails 4.0.4
+Using sdoc 0.4.1
+Using websocket 1.2.1
+Using selenium-webdriver 2.44.0
+Using simple_form 3.0.2
+Using spring 1.1.3
+Using thin 1.6.3
+Using turbolinks 2.5.1
+Using uglifier 2.5.3
+Your bundle is complete!
+Gems in the group production were not installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+garymac:repos gary$ 
